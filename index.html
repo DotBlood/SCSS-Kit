@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS-Kit</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="wrapper__inner">
+            <header class="header">
+                <h1 class="header__title text_title open-sans">SCSS-Kit</h1>
+                <nav class="header__menu">
+                    <ul class="header__menu__items">
+                        <li class="header__menu__item">
+                            <a href="#header" class="header__menu__links"> Заголовки </a>
+                        </li>
+                        <li class="header__menu__item">
+                            <a href="#paragraphs" class="header__menu__links"> Абзацы </a>
+                        </li>
+                        <li class="header__menu__item">
+                            <a href="#lists" class="header__menu__links"> Списки </a>
+                        </li>
+                        <li class="header__menu__item">
+                            <a href="#links" class="header__menu__links"> Ссылки </a>
+                        </li>
+                        <li class="header__menu__item">
+                            <a href="#grids" class="header__menu__links"> Гриды </a>
+                        </li>
+                        <li class="header__menu__item">
+                            <a href="#imgs" class="header__menu__links"> Картинки </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="main">
+                <div class="block" id="header">
+                    <h2 class="open-sans">Заголовки:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner">
+                            <div class="open-sans">
+                                <p class="text_block_title">Заголовки Open-Sans:</p>
+                                <hr>
+                                <h1>H1 - Lorem, ipsum dolor.</h1>
+                                <h2>H2 - Lorem, ipsum dolor.</h2>
+                                <h3>H3 - Lorem, ipsum dolor.</h3>
+                                <h4>H4 - Lorem, ipsum dolor.</h4>
+                                <h5>H5 - Lorem, ipsum dolor.</h5>
+                                <h6>H6 - Lorem, ipsum dolor.</h6>
+                            </div>
+                            <div class="roboto">
+                                <p class="text_block_title">Заголовки Roboto:</p>
+                                <hr>
+                                <h1>H1 - Lorem, ipsum dolor.</h1>
+                                <h2>H2 - Lorem, ipsum dolor.</h2>
+                                <h3>H3 - Lorem, ipsum dolor.</h3>
+                                <h4>H4 - Lorem, ipsum dolor.</h4>
+                                <h5>H5 - Lorem, ipsum dolor.</h5>
+                                <h6>H6 - Lorem, ipsum dolor.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block" id="paragraphs">
+                    <h2 class="open-sans" id="paragraphs">Абзацы:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner">
+                            <p class="header__title text_title"> P - Заголовок в header. </p>
+
+                            <p class="text_title">P - предназначен для заголовков блоков.</p>
+
+                            <p class="text_block_title">P - предназначен для подзаголовков блоков.</p>
+                            <p class="text roboto"> P с классом roboto - текст для заголовка страницы, он имеет 2
+                                класса: `text - стандартный класс текста, roboto - это название шрифта`.</p>
+                            <p class="text open-sans"> P с классом open-sans - текст для заголовка страницы, он имеет 2
+                                класса: `text - стандартный класс текста, open-sans - это название шрифта`.</p>
+                            <p class="text">P - стандартный класс для текста.</p>
+
+                        </div>
+                    </div>
+
+                    <p class="text roboto"> Как вы могли заметить для текста по умолчанию <span
+                            class="text_highlight">не идёт какой-то определённый шрифт</span>, поэтому его нужно
+                        указывать отдельно. Также можно поместить класс <span class="code">open-sans</span> или <span
+                            class="code">roboto</span> в body для того, чтобы определить, какой именно будет
+                        использоваться шрифт по умолчанию, <span class="text_highlight">или это можно делать
+                            отдельно,</span> через добавление данных атрибутов непосредственно на сам текст. </p>
+                </div>
+
+                <div class="block">
+                    <h2 class="open-sans" id="paragraphs">Списки:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner">
+                            <p class="text_block_title text">UL+LI</p>
+                            <ul class="text open-sans">
+                                <li>
+                                    <p>Пример ul > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ul > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ul > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ul > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ul > li</p>
+                                </li>
+                            </ul>
+                            <hr>
+                            <p class="text_block_title text">OL+LI</p>
+                            <ol class="text open-sans">
+                                <li>
+                                    <p>Пример ol > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ol > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ol > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ol > li</p>
+                                </li>
+                                <li>
+                                    <p>Пример ol > li</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="block">
+                    <h2 class="open-sans" id="paragraphs">Ссылки:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner text">
+                            <a href="link">Текст</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <h2 class="open-sans" id="paragraphs">Гриды:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner text open-sans">
+
+                            <div class="grid-base">
+                                <div class="col-1   outline"> </div>
+                                <div class="col-2   outline"> </div>
+                                <div class="col-3   outline"> </div>
+                                <div class="col-4   outline"> </div>
+                                <div class="col-5   outline"> </div>
+                                <div class="col-6   outline"> </div>
+                                <div class="col-7   outline"> </div>
+                                <div class="col-8   outline"> </div>
+                                <div class="col-9   outline"> </div>
+                                <div class="col-10  outline"> </div>
+                                <div class="col-11  outline"> </div>
+                                <div class="col-12  outline"> </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <h2 class="open-sans" id="imgs">Картинки:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner flex justify-content-center  text open-sans">
+
+                            <img src="https://placehold.co/500x500" class="img" alt="">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <h2 class="open-sans" id="forms">Формы:</h2>
+                    <div class="block__example">
+                        <div class="block__example__inner text open-sans">
+                            <form class="form flex f-direction">
+                                <label class="mb-1">
+                                    <input class="input " type="text" placeholder="Пример input">
+                                </label>
+                                <label class="mb-1">
+                                    <textarea name="" id="" class="textarea" rows="5"
+                                        placeholder="Пример textarea"></textarea>
+                                </label>
+                                <button class="btn-gradient-pp">Пример</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

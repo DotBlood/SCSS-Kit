@@ -1,0 +1,15 @@
+@use "../other/var" as *;
+$grid-columns: 12;
+
+.grid-base {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-gap: 20px;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        grid-column: span $i;
+        min-height: 15px;
+    }
+}

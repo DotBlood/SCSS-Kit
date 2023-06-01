@@ -1,0 +1,119 @@
+@use "./mixin/btns";
+@use "../other/forward-other" as fo;
+
+// links
+a {
+    @extend .open-sans;
+    font-size: fo.$v-font-size-base;
+    color: fo.$v-link-color;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: fo.$v-link-color-hover;
+    }
+}
+
+blockquote {
+    background-color: fo.$v-background-blocks-second;
+    border-color: fo.$v-active-border;
+}
+
+// setting default text;
+p {
+    @extend .text;
+}
+
+.text {
+    color: fo.$v-text;
+    font-size: fo.$v-font-size-base;
+    font-weight: fo.$v-font-weight-normal;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+.text_title {
+    @extend .text;
+    @extend .open-sans;
+
+    font-size: calc(fo.$v-font-size-base + 1rem);
+}
+
+.text_block_title {
+    @extend .text_title;
+    color: fo.$v-disabled-blocks;
+}
+
+span {
+    @extend .text;
+}
+
+// setting header-s (h1,h2 etc);
+h1 {
+    color: fo.$v-text;
+    font-size: fo.$v-font-size-h1;
+    font-weight: fo.$v-font-weight-bold;
+}
+
+h2 {
+    @extend h1;
+    font-size: fo.$v-font-size-h2;
+}
+
+h3 {
+    @extend h1;
+    font-size: fo.$v-font-size-h3;
+}
+
+h4 {
+    @extend h1;
+    font-size: fo.$v-font-size-h4;
+}
+
+h5 {
+    @extend h1;
+    font-size: fo.$v-font-size-h5;
+}
+
+h6 {
+    @extend h1;
+    font-size: fo.$v-font-size-h6;
+}
+
+// gradient to btn
+
+button {
+    @include btns.button();
+    transition: border-color 0.8s ease;
+    padding: 15px;
+    width: fit-content;
+    max-width: 100%;
+    &:hover {
+        border-color: fo.$v-active-border;
+    }
+}
+
+.btn-gradient-pp {
+    @extend button;
+
+    @include btns.gradient("primary", "pink");
+
+    &:hover {
+        border-color: fo.$v-active-border;
+    }
+}
+
+.btn-gradient-ro {
+    @extend button;
+
+    @include btns.gradient("red", "orange");
+
+    &:hover {
+        border-color: fo.$v-active-border;
+    }
+}

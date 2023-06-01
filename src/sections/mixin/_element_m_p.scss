@@ -1,0 +1,6 @@
+@mixin element($element, $margin, $padding) {
+    #{$element} {
+        margin: $margin;
+        padding: $padding;
+    }
+}

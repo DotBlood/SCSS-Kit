@@ -1,0 +1,54 @@
+@use "../other/var" as *;
+@use "../text/text" as *;
+
+.input {
+    padding: 7px 12px;
+    border-radius: $border-radius;
+    border: 1px solid $active-border;
+    font-size: $font-size-base;
+    background: $background-main;
+    color: $text;
+    transition: border-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+.input:hover {
+    box-shadow: 4px 4px 7px #00000025;
+    border-color: $disabled-border;
+}
+
+.input::placeholder {
+    color: rgb(175, 175, 175);
+}
+
+input {
+    outline: none;
+}
+
+.textarea {
+    @extend .text;
+    @extend .open-sans;
+    border-radius: $border-radius;
+    border: 1px solid $active-border;
+    font-size: 16px;
+    background: $background-main;
+    color: $text;
+    padding: $padding-small;
+    overflow: auto;
+    box-shadow: 4px 4px 7px #00000025;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+textarea {
+    outline: none;
+}
+
+.label {
+    @extend .text;
+}
+
+.form {
+    overflow: hidden;
+}

@@ -1,0 +1,41 @@
+@use "../../other/var" as *;
+
+$button: (
+    cursor: pointer,
+    padding: 10px 12px,
+    min-width: 150px,
+    font-size: $font-size-base,
+    border: 1px solid $disabled-blocks,
+    border-radius: $border-radius,
+    color: $text,
+);
+
+@mixin button() {
+    padding: map-get($button, padding);
+    cursor: map-get($button, cursor);
+    min-width: map-get($button, min-width);
+    font-size: map-get($button, font-size);
+    border-radius: map-get($button, border-radius);
+    color: map-get($button, color);
+    border: map-get($button, border);
+}
+
+$colors__btn: (
+    "primary": #0066cc,
+    "light": #f8f9fa,
+    "red": #fc575e,
+    "pink": #f78da7,
+    "purple": #9f7aea,
+    "blue": #4ea8de,
+    "green": #37d5bc,
+    "yellow": #f6c64a,
+    "orange": #f29e4c,
+);
+
+@mixin gradient($color_first, $color_second) {
+    background: linear-gradient(
+        to bottom right,
+        map-get($colors__btn, $color_first),
+        map-get($colors__btn, $color_second)
+    );
+}

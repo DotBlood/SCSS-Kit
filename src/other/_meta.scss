@@ -1,0 +1,44 @@
+@use "var" as *;
+
+.visually-hidden {
+    display: none;
+}
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: $background-blocks;
+    &__inner {
+        margin: $margin-large;
+        padding: $padding-base;
+    }
+}
+
+.block {
+    margin: $margin-base;
+
+    &__example {
+        width: 100%;
+        background-color: $background-blocks-second;
+        border-radius: $border-radius;
+
+        &__inner {
+            padding: $padding-base;
+        }
+    }
+}
+
+.code {
+    color: #08f;
+    font-weight: bold;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+@for $i from 1 through 5 {
+    .mb-#{$i} {
+        margin-bottom: #{$i}vh;
+    }
+}

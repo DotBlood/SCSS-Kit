@@ -1,0 +1,9 @@
+@use "../other/forward-other";
+hr {
+    border: none;
+    border-top: 3px double forward-other.$v-secondary;
+    color: forward-other.$v-secondary;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}

@@ -1,0 +1,49 @@
+@use "mixin/element_m_p.scss";
+@use "../other/forward-other" as fo;
+
+.header {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    height: 20vh;
+
+    &__title {
+        text-align: center;
+        position: relative;
+        z-index: 50;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0px;
+            top: -5px;
+            background-color: fo.$v-background-main;
+            min-height: 50px;
+            border-radius: fo.$v-border-radius;
+            z-index: -1;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__items {
+            display: flex;
+            list-style: none;
+        }
+
+        &__links {
+            margin-left: fo.$v-margin-base;
+            font-size: calc(fo.$v-font-size-base + 0.2rem);
+        }
+    }
+}
+
+html {
+    background-color: fo.$v-background-main;
+}
